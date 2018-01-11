@@ -19,3 +19,7 @@ hr {
 
 #reunion-section .list-group-item {
   width: 180px; }
+
+  a:hover {
+    text-decoration: none;
+  }
