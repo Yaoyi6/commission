@@ -85,10 +85,14 @@
         <div class="row mb-2">
           <div class="col-lg-3 align-self-center d-flex justify-content-end">Début</div>
           <div class="col-lg-3 ">
-            <input id="datepicker1"/>
+            <input name="date_debut" id="date_debut"/>
             <script>
-                $('#datepicker1').datepicker({
-                    uiLibrary: 'bootstrap'
+                var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+                $('#date_debut').datepicker({
+                    format: 'dd/mm/yyyy',
+                    iconsLibrary: 'fontawesome',
+                    uiLibrary: 'bootstrap',
+                    minDate: today,
                 });
             </script>
           </div>
@@ -96,8 +100,11 @@
             à
           </div>
           <div class="col-lg-3 align-self-center">
-            <select id="commissions"class="form-control">
-            <option>00h00</option><option>06h00</option><option>12h00</option><option>18h00</option>
+            <select name="heure_fin" id="commissions" class="form-control">
+              <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option>
+              <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+              <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+              <option>20:00</option>
             </select>
           </div>
         </div>
@@ -105,10 +112,14 @@
         <div class="row mb-4">
           <div class="col-lg-3 align-self-center d-flex justify-content-end">Échéance</div>
           <div class="col-lg-3 ">
-            <input id="datepicker2"/>
+            <input name="date_fin" id="date_fin"/>
             <script>
-                $('#datepicker2').datepicker({
-                    uiLibrary: 'bootstrap'
+                var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+                $('#date_fin').datepicker({
+                    format: 'dd/mm/yyyy',
+                    iconsLibrary: 'fontawesome',
+                    uiLibrary: 'bootstrap',
+                    minDate: today,
                 });
             </script>
           </div>
@@ -116,8 +127,11 @@
             à
           </div>
           <div class="col-lg-3 align-self-center">
-            <select id="commissions"class="form-control">
-            <option>00h00</option><option>06h00</option><option>12h00</option><option>18h00</option>
+            <select name="heure_fin" id="commissions" class="form-control">
+              <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option>
+              <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+              <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+              <option>20:00</option>
             </select>
           </div>
         </div>
