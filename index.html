@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
+
 </head>
 
 <body>
@@ -23,7 +25,7 @@
           <span class="h4 text-success d-inline align-middle mx-2">Commission</span>
       </a>
 
-      <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!--<div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Accueil</a>
@@ -35,12 +37,7 @@
                 <a class="nav-link " href="onglets/reunions.html">(temporaire) Réunion</a>
               </li>
         </ul>
-        <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Login</a>
-              </li>
-        </ul>
-      </div>
+      </div>-->
     </div>
   </nav>
 
@@ -54,19 +51,19 @@
               <div class="h3 text-success" >Login</div>
               <p class="text-muted"><em>login avec votre compte ENT</em></p>
               <hr class="my-4">
-              <form action="onglets/reunions.html">
+              <form id="formLogin" method="post" action="accueil.html">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control" placeholder=Email@univ-lorraine.fr>
+                      <input id="email" name="email" type="email" class="form-control form-control" placeholder=Email@univ-lorraine.fr>
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control" placeholder="Mot de Passe">
+                      <input id="password" name="password" type="password" class="form-control form-control" placeholder="Mot de Passe">
                     </div>
-                    <input type="submit" class="btn btn-outline-success btn-block" value="(temporaire) Directe Réunion">
+                    <input id="login" name="login" type="button" class="btn btn-outline-success btn-block" value="ACCEDER">
               </form>
             </div>
           </div>
         </div>
-        <div class="col-lg-8 d-none d-lg-block">
+        <!--<div class="col-lg-8 d-none d-lg-block">
           <div id="" class="card p-3 d-block my-3 " >
             <div class="d-flex col justify-content-center">
               <img src="img/logo.png" style="width:15%; height:15%;" alt="">
@@ -100,7 +97,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
 
     </div>
@@ -108,9 +105,11 @@
 
 
 
-  <script src="js/jquery-3.2.1.min.js"></script>
+  <!--<script src="js/jquery-3.2.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

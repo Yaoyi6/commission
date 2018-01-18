@@ -20,7 +20,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <a href="../index.html" class="navbar-brand">
+      <a href="accueil.html" class="navbar-brand">
           <img src="../img/logo.png" width="50" height="50">
           <span class="h4 text-success d-inline align-middle mx-2">Commission</span>
       </a>
@@ -28,7 +28,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Accueil</a>
+                <a class="nav-link" href="accueil.html">Accueil</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="aPropos.html">À propos</a>
@@ -48,9 +48,10 @@
     <div class="container mb-4">
       <div class="chemin">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
-          <li class="breadcrumb-item active">Réunions</li>
-          <li class="breadcrumb-item active">Créer</li>
+          <li class="breadcrumb-item"><a href="accueil.html">Accueil</a></li>
+          <li class="breadcrumb-item active"><a href="reunions.html">Réunions</a></li>
+          <li class="breadcrumb-item active"><a href="creerReunion_Etape1.html">Etape 1</a></li>
+          <li class="breadcrumb-item active">Etape 2</li>
         </ol>
       </div>
       <div class="container text-center">
@@ -120,11 +121,13 @@
                           <label class="form-check-label">
                           <input type="checkbox" class="form-check-input">Redoubler</label><br>
                           <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input">Bulletin Secret</label><br>
+                          <input type="checkbox" class="form-check-input">Validation</label><br>
                           <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input">Bulletin Secret</label><br>
+                          <input type="checkbox" class="form-check-input">Reorientation</label><br>
                           <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input">Bulletin Secret</label><br>
+                          <input type="checkbox" class="form-check-input">--------------</label><br>
+                          <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input">--------------</label><br>
                         </div>
                     </div>
                     <div class="row justify-content-between my-3">
@@ -141,11 +144,6 @@
                   <div class="col-md-8 px-4">
                     <div class="row text-success">
                       <legend >Etudiants participés</legend>
-                      <!--<form action="php/upload.php" method="post" enctype="multipart/form-data">
-                            Select image to upload:
-                            <input type="file" name="archivo" id="archivo">
-                            <input type="submit" value="Upload Image" name="submit">
-                      </form>-->
                     </div>
                     <div class="row mb-4">
                       <div class="col ml-5"><strong>nombre total actual</strong><span class="ml-5">9</span></div>
@@ -255,18 +253,25 @@
               </div>
       </form>
 
-      <form name="form1" id="form1" method="post" action="../php/upload.php" enctype="multipart/form-data">
-            <h4 class="text-center">Importer</h4>
+      <form name="form1" id="form1" method="post" action="../php/upload.php" enctype="multipart/form-data"> <!--<form name="form1" id="form1" method="post" action="../php/upload.php" enctype="multipart/form-data">-->
+           <h4 class="text-center">Importer</h4>
 
-            <div class="form-group bg-light">
-                  <label class="col-sm-2 control-label">Fichiers</label>
-                  <div class="col col-sm-7">
-                        <input type="file" class="form-control" id="fileUpLoad[]" name="fileUpLoad[]" multiple="">
-                        <button type="submit" class="btn btn-primary">UpLoad</button>
-                  </div>
+           <div class="alert alert-success alert-dismissible fade" role="alert">
+               <strong>Completé!</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Les fichiers ont été telechargés.
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+           </div>
 
-            </div>
-      </form>
+           <div class="form-group bg-light">
+                 <label class="col-sm-2 control-label">Fichiers</label>
+                 <div class="col col-sm-7">
+                       <input type="file" class="form-control" id="fileUpLoad[]" name="fileUpLoad[]" multiple="">
+                       <button id="btn-upload" type="button" class="btn btn-primary">UpLoad</button>
+                 </div>
+
+           </div>
+     </form>
 
 
     </div>
@@ -277,4 +282,5 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/upload.js"></script>
 </html>

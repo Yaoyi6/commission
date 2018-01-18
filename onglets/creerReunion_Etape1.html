@@ -20,7 +20,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <a href="../index.html" class="navbar-brand">
+      <a href="accueil.html" class="navbar-brand">
           <img src="../img/logo.png" width="50" height="50">
           <span class="h4 text-success d-inline align-middle mx-2">Commission</span>
       </a>
@@ -28,7 +28,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Accueil</a>
+                <a class="nav-link" href="accueil.html">Accueil</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="aPropos.html">À propos</a>
@@ -48,7 +48,7 @@
     <div class="container mb-4">
       <div class="chemin">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+          <li class="breadcrumb-item"><a href="accueil.html">Accueil</a></li>
           <li class="breadcrumb-item active"><a href="reunions.html">Réunions</a></li>
           <li class="breadcrumb-item active">Créer</li>
         </ol>
@@ -65,97 +65,95 @@
 <section id="creer-body-1">
   <div class="container">
     <div class="card m-4 p-5 lead align-self-center">
-      <form action="creerReunion_Etape2.html">
-        <div class="row bg">
-          <div class="col-lg-3 text-success"><legend>Commission</legend></div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 "></div>
-          <div class="col-lg-5 ">
-              <div class="form-group">
-                  <select id="commissions" class="form-control">
+      <form id="formEtape1">
+                <div class="row bg">
+                    <div class="col-lg-3 text-success"><legend>Commission</legend></div>
+                </div>
+                <div class="row">
+                      <div class="col-lg-3 "></div>
+                      <div class="col-lg-5 ">
+                          <div class="form-group">
+                              <select id="commission" name="commission" class="form-control"></select>
+                          </div>
+                      </div>
+                </div>
+                <div class="row">
+                      <div class="col-lg-3 text-success"><legend>Dates</legend></div>
+                </div>
+                <div class="row mb-2">
+                        <div class="col-lg-3 align-self-center d-flex justify-content-end">Début</div>
+                        <div class="col-lg-3 ">
+                          <input id="date_debut" name="date_debut" />
+                              <script>
+                                  var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+                                  $('#date_debut').datepicker({
+                                      format: 'yyyy/mm/dd',
+                                      iconsLibrary: 'fontawesome',
+                                      uiLibrary: 'bootstrap',
+                                      minDate: today,
+                                  });
+                              </script>
+                        </div>
+                        <div class="col-lg-1 align-self-center d-flex justify-content-end">
+                          à
+                        </div>
+                        <div class="col-lg-3 align-self-center">
+                          <select id="heure_fin" name="heure_fin"  class="form-control">
+                            <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option>
+                            <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+                            <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+                            <option>20:00</option>
+                          </select>
+                        </div>
+                </div>
 
-                  </select>
-              </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 text-success"><legend>Dates</legend></div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-lg-3 align-self-center d-flex justify-content-end">Début</div>
-          <div class="col-lg-3 ">
-            <input name="date_debut" id="date_debut"/>
-            <script>
-                var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-                $('#date_debut').datepicker({
-                    format: 'dd/mm/yyyy',
-                    iconsLibrary: 'fontawesome',
-                    uiLibrary: 'bootstrap',
-                    minDate: today,
-                });
-            </script>
-          </div>
-          <div class="col-lg-1 align-self-center d-flex justify-content-end">
-            à
-          </div>
-          <div class="col-lg-3 align-self-center">
-            <select name="heure_fin" id="commissions" class="form-control">
-              <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option>
-              <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
-              <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
-              <option>20:00</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="row mb-4">
-          <div class="col-lg-3 align-self-center d-flex justify-content-end">Échéance</div>
-          <div class="col-lg-3 ">
-            <input name="date_fin" id="date_fin"/>
-            <script>
-                var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-                $('#date_fin').datepicker({
-                    format: 'dd/mm/yyyy',
-                    iconsLibrary: 'fontawesome',
-                    uiLibrary: 'bootstrap',
-                    minDate: today,
-                });
-            </script>
-          </div>
-          <div class="col-lg-1 align-self-center d-flex justify-content-end">
-            à
-          </div>
-          <div class="col-lg-3 align-self-center">
-            <select name="heure_fin" id="commissions" class="form-control">
-              <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option>
-              <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
-              <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
-              <option>20:00</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 text-success"><legend>Description</legend></div>
-        </div>
-        <div class="row mb-4">
-          <div class="col-lg-3"></div>
-          <div class="col-lg-6">
-              <textarea id="message" class="form-control" rows="5"></textarea>
-          </div>
-        </div>
-        <div class="row mb-4">
-          <div class="col-lg-3"><legend></legend></div>
-          <div class="col-lg-3 align-self-center">
-            <label class="form-check-label">
-            <input type="checkbox" class="form-check-input">Bulletin Secret</label>
-          </div>
-        </div>
-        <div class="d-lg-flex">
-            <div class="mr-auto p-2"><button type="button" name="Annuler" class="btn btn-danger btn-block">Annuler</button></div>
-            <div class="p-2 "><input type="submit" class="btn btn-outline-success btn-block" value="Enregistrer"></div>
-            <div class="p-2 "><input type="submit" class="btn btn-primary btn-block" value="Continuer"></div></a>
-        </div>
+                <div class="row mb-4">
+                      <div class="col-lg-3 align-self-center d-flex justify-content-end">Échéance</div>
+                      <div class="col-lg-3 ">
+                            <input id="date_fin" name="date_fin"/>
+                            <script>
+                                var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+                                $('#date_fin').datepicker({
+                                    format: 'yyyy/mm/dd',
+                                    iconsLibrary: 'fontawesome',
+                                    uiLibrary: 'bootstrap',
+                                    minDate: today,
+                                });
+                            </script>
+                      </div>
+                      <div class="col-lg-1 align-self-center d-flex justify-content-end">
+                        à
+                      </div>
+                      <div class="col-lg-3 align-self-center">
+                        <select id="heure_fin" name="heure_fin"  class="form-control">
+                            <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option>
+                            <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+                            <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+                            <option>20:00</option>
+                        </select>
+                      </div>
+                </div>
+                <div class="row">
+                      <div class="col-lg-3 text-success"><legend>Description</legend></div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-lg-3"></div>
+                  <div class="col-lg-6">
+                        <textarea id="description" name="description" class="form-control" rows="5"></textarea>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                      <div class="col-lg-3"><legend></legend></div>
+                      <div class="col-lg-3 align-self-center">
+                        <label class="form-check-label">
+                        <input type="checkbox" id="bulletin_secret" name="bulletin_secret" class="form-check-input">Bulletin Secret</label>
+                      </div>
+                </div>
+                <div class="d-lg-flex">
+                    <div class="mr-auto p-2"><button type="button" name="Annuler" class="btn btn-danger btn-block">Annuler</button></div>
+                    <!--<div class="p-2 "><input id="btn-reunion" type="button" class="btn btn-outline-success btn-block" value="Enregistrer"></div>-->
+                    <div class="p-2 "><input id="btn-reunion" type="button" class="btn btn-outline-success btn-block" value="Continuer"></div>
+                </div>
       </form>
     </div>
   </div>
@@ -165,5 +163,6 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/insererDonnees.js"></script>
   <script src="../js/recupererDonnees.js"></script>
 </html>

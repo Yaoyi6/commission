@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Accueil</a>
+                <a class="nav-link" href="accueil.html">Accueil</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="aPropos.html">À propos</a>
@@ -33,7 +33,7 @@
         </ul>
         <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Login</a>
+                <a class="nav-link" href="../index.html">Logout</a>
               </li>
         </ul>
       </div>
@@ -45,8 +45,9 @@
     <div class="container mb-4">
       <div class="chemin">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
-          <li class="breadcrumb-item active">Réunions</li>
+          <li class="breadcrumb-item"><a href="accueil.html">Accueil</a></li>
+          <li class="breadcrumb-item active"><a href="reunions.html">Réunions</a></li>
+          <li class="breadcrumb-item active">Votes</li>
         </ol>
       </div>
       <div class="container ml-5">
@@ -64,38 +65,30 @@
         <!-- TYPE RÉUNION-->
         <div class="col-lg-3 d-lg-block">
           <div class="card mb-5">
-            <div class="card-header">
-              <span class="lead font-weight-bold">DUT Semestre 4</span>
-            </div>
-            <div class="card-body">
-              <div class="card-title display-4 row justify-content-center">
-                <span class="text-dark mr-2">5</span><small>/</small>
-                <span class="text-success ml-2">5</span>
-              </div>
-              <div class="card-subtitle h6 text-muted row justify-content-center">
-                <small>étudiants à être voter</small>
-              </div>
-              <hr>
-              <p class="py-3">
-                de	11/11/2017 à 11h
-                à	01/01/2018 à 11h
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia suscipit aliquid qui ut molestiae fugit esse eos possimus, repellat expedita porro obcaecati necessitatibus molestias dolorum.
-              </p>
-              <div class="dropdown d-flex">
-                  <button class="btn btn-outline-info btn-block" type="button" data-toggle="dropdown">
-                      <i class="fa fa-cog"></i>
-                  </button>
-                  <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">modifier</a>
-                      <a class="dropdown-item" href="#">supprimer</a>
-                  </div>
-              </div>
-            </div>
-            <div class="card-footer">
-            Il reste <span>6</span> jours
-          </div>
+                <div class="card-header">
+                  <span class="lead font-weight-bold">DUT Semestre 4</span>
+                </div>
+                <div class="card-body">
+                      <div class="card-title display-4 row justify-content-center">
+                            <span class="text-dark mr-2">5</span><small>/</small>
+                            <span class="text-success ml-2">5</span>
+                      </div>
+                      <div class="card-subtitle h6 text-muted row justify-content-center">
+                          <small>étudiants à être voter</small>
+                      </div>
+                      <hr>
+                      <p class="py-3">
+                            de	11/11/2017 à 11h
+                            à	01/01/2018 à 11h
+                      </p>
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia suscipit aliquid qui ut molestiae fugit esse eos possimus, repellat expedita porro obcaecati necessitatibus molestias dolorum.
+                      </p>
+
+                </div>
+                <div class="card-footer">
+                      Il reste <span>6</span> jours
+                </div>
           </div>
         </div>
         <!-- LISTE Etudiants-->
@@ -104,39 +97,19 @@
             <div class="card mb-5 mt-4">
               <div class="card-body">
                 <div class="container">
-                  <table class="table table-sm table-hover ">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nom de ficher</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="">
-                            <th scope="row">1</th>
-                            <td>Note.pdf</td>
-                            <td>1,23Mo</td>
-                            <td><a href="../files/periode02.pdf" class="btn btn-sm btn-outline-success voir-pdf" title="">Voir en ligne</a></td>
-                            <td><a href="../php/telecharger.php" class="btn btn-sm btn-outline-success">telecharger</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Absences.pdf</td>
-                            <td>1,00Mo</td>
-                            <td><a href="../files/periode02.pdf" class="btn btn-sm btn-outline-success voir-pdf" title="">Voir en ligne</a></td>
-                            <td><a href="../php/telecharger.php" class="btn btn-sm btn-outline-success">telecharger</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Contact.pdf</td>
-                            <td>1,45Mo</td>
-                            <td><a href="../files/periode02.pdf" class="btn btn-sm btn-outline-success voir-pdf" title="">Voir en ligne</a></td>
-                            <td><a href="../php/telecharger.php" class="btn btn-sm btn-outline-success">telecharger</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table class="table table-sm table-hover ">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nom de ficher</th>
+                                <th>Taille</th>
+                                <th>Voir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
                 </div>
               </div>
             </div>
@@ -266,4 +239,5 @@
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/pluginPDF.js"></script>
+  <script src="../js/uploadListe.js"></script>
 </html>

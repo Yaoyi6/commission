@@ -1,13 +1,11 @@
 jQuery(document).ready(function($){
 
       $.ajax({
-        	   url:'../php/connexion.php',
+        	   url:'../php/recupererDonnees.php',
+
         	   success: function(reponse) {
             	      var html_text = reponse;
-                        $('#commissions').append(html_text);
-
-
+                        $('#commission').append(html_text);
         	  	}
-
       });
 });
